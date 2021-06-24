@@ -1,0 +1,14 @@
+[Unit]
+Description=Combat Extended Uploader
+After=network.target
+
+[Service]
+WorkingDirectory=/home/combatextended
+Type=simple
+ExecStart=/bin/bash /home/combatextended/upload.sh
+User=combatextended
+Group=combatextended
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
